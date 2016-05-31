@@ -1,0 +1,29 @@
+{
+  "name": "ni",
+  "authors": [
+    "niwenbin <niwenbin_1989@163.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4",
+    "angular": "angularjs#^1.5.6"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "html5-boilerplate": "^5.3.0",
+    "angular-route": "^1.5.6",
+    "angular-loader": "^1.5.6",
+    "angular-mocks": "^1.5.6"
+  }
+}
