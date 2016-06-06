@@ -1,17 +1,14 @@
 'use strict';
 
 angular.module('myApp.view1', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-//定义路由
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
-}])
-
 .controller('View1Ctrl', function($scope, $http) {
 //数据初始化
+  var mySwiper = new Swiper('.swiper-container',{
+    loop: true,
+    autoplay: 3000,
+  });
+
+
   $scope.qty =28;
   $scope.cost =1321;
   $scope.msg ="ssssssssssssss";
@@ -52,7 +49,18 @@ $http({
     return input.toUpperCase();
   }
 })
-
+    .directive("titleDiv", function() {
+//自定义模块
+      return {
+        template : '<div class="index_title"><div class="index_logo"></div>' +
+        '          <div class="index_login">' +
+        '          <a class="index_login_btn" href="">登录</a>' +
+        '          <a class="index_login_btn" href="#/view1">登录</a>' +
+        '          <a class="index_login_btn" href="#/view2">登录</a>' +
+        '          </div>' +
+        '          </div>'
+      };
+    })
 .directive("runoobDirective", function() {
 //自定义模块
   return {
