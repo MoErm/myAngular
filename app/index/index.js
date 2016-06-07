@@ -1,13 +1,39 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
-.controller('View1Ctrl', function($scope, $http) {
+angular.module('myApp.index', ['ngRoute'])
+.controller('IndexCtrl', function($scope, $http) {
 //数据初始化
   var mySwiper = new Swiper('.swiper-container',{
     loop: true,
     autoplay: 3000,
   });
 
+  $(function () {
+    $("ul.bh >li").hover(function () {
+      $("ul.bh >li.aq1").removeClass("aq1").addClass("aq");
+
+      $("div.nr >div.ms").hide();
+      $("ul.bh >li.li1").removeClass("li1");
+      $(this).addClass("li1");
+
+      if ($(this).hasClass("aq")) {
+        $("div.nr >div.nr_aq").show();
+      }
+      if ($(this).hasClass("jk")) {
+        $("div.nr >div.nr_jk").show();
+      }
+      if ($(this).hasClass("px")) {
+        $("div.nr >div.nr_px").show();
+      }
+      if ($(this).hasClass("bx")) {
+        $("div.nr >div.nr_bx").show();
+      }
+    });
+
+    $(".btn_yy").click(function () {
+      window.location = GlobalHref.Reservation();
+    });
+  });
 
   $scope.qty =28;
   $scope.cost =1321;
@@ -54,9 +80,8 @@ $http({
       return {
         template : '<div class="index_title"><div class="index_logo"></div>' +
         '          <div class="index_login">' +
-        '          <a class="index_login_btn" href="">登录</a>' +
-        '          <a class="index_login_btn" href="#/view1">登录</a>' +
-        '          <a class="index_login_btn" href="#/view2">登录</a>' +
+        '          <a class="index_login_btn" href="#/">首页</a>' +
+        '          <a class="index_login_btn" href="#/view2">家策商学院</a>' +
         '          </div>' +
         '          </div>'
       };

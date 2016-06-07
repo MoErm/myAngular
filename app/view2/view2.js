@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute','myApp.view1'])
+angular.module('myApp.view2', ['ngRoute','myApp.index'])
 .controller('View2Ctrl', function($scope) {
 //测试数据
 

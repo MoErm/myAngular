@@ -6,9 +6,10 @@
 
 // load all of the dependencies asynchronously.
 $script([
+    'vender/js/jquery.min.js',
     'vender/js/angular-route.min.js',
     'app.js',
-    'view1/view1.js',
+    'index/index.js',
     'view2/view2.js',
     'vender/js/idangerous.swiper.min.js',
     'components/version/version.js',

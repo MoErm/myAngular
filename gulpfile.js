@@ -47,20 +47,20 @@ gulp.src('./app/view2/*.js')
         }))
 .pipe(gulp.dest('./dest/view2'));
 //关键字取消混淆，避免angular注入报错
-return gulp.src('./app/view1/*.js')
+return gulp.src('./app/index/*.js')
 .pipe(uglify({
             mangle: {
                 except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window']
             }
         }))
-.pipe(gulp.dest('./dest/view1'));
+.pipe(gulp.dest('./dest/index'));
 });
 //html导入
 gulp.task('html', function() { 
 gulp.src('./app/view2/*.html')
     .pipe(gulp.dest('./dest/view2'));
-gulp.src('./app/view1/*.html')
-    .pipe(gulp.dest('./dest/view1'));
+gulp.src('./app/index/*.html')
+    .pipe(gulp.dest('./dest/index'));
 return 
 });
 //img导入

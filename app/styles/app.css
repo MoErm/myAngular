@@ -145,13 +145,13 @@ Pagination Styles
 /* app css stylesheet */
 .index_title{
     position: relative;
-    width:100%;height:135px;background:white;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99087cc9,endColorstr=#99087cc9); z-index:9999; border-bottom:4px solid #e69b29;
+    width:100%;height:80px;background:white;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99087cc9,endColorstr=#99087cc9); z-index:9999; border-bottom:4px solid #e69b29;
 }
 .index_logo{
-    width: 180px;
-    height:130px;
-    margin: 0 auto;
-    background: url("../images/logo2.png");
+    width: 233px;
+    height:72px;
+    margin: 10px 30px;
+    background: url("../images/logo3.png") no-repeat;
     background-size: 100%;
 }
 .index_login{
@@ -169,7 +169,7 @@ Pagination Styles
     border-radius: 30px;
     border: 2px solid #087CC9;
     font-weight: bolder;
-
+    color: #087CC9;
 }
 .index_login_btn:hover{
     text-decoration:none;
@@ -177,3 +177,80 @@ Pagination Styles
     background: rgba(230,115,41,0.4);
     color: white;
 }
+
+/*四大保障*/
+.infoBox{ background:#087cc9;}
+.infoBox .box{ padding:40px; padding-bottom:0; width:920px;margin:auto;}
+.infoBox .title{ font: bold 36px/50px "微软雅黑","宋体"; color:#fff; text-align:center; margin-top:10px;}
+.infoBox .title_x{ font: normal 14px/30px "微软雅黑","宋体"; color:#fff; text-align:center; margin-top:10px;}
+
+
+.infoBox ul{ margin-top:50px}
+.infoBox ul li{float:left;width:167px;text-align:center;padding-top:150px;border-bottom: solid transparent 10px; margin:0 30px; cursor:pointer;}
+.infoBox ul li:hover{ border-bottom: solid #74d0ff 10px;}
+.infoBox ul li a{font: normal 24px/60px "微软雅黑","宋体";color:#FFF; text-decoration:none;}
+.infoBox ul li a:hover{
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+li{list-style: none;}
+.infoBox ul .li1{ border-bottom: solid #74d0ff 10px;}
+
+.infoBox .aq{background:url("../images/icon_01.gif") no-repeat center top;}
+.infoBox .aq:hover{background:url("../images/icon_01-1.gif") no-repeat center top;}
+.infoBox .aq1{background:url("../images/icon_02-1.gif") no-repeat center top;}
+
+.infoBox .jk{background:url("../images/icon_02.gif") no-repeat center top;}
+.infoBox .jk:hover{background:url("../images/icon_02-1.gif") no-repeat center top;}
+.infoBox .jk1{background:url("../images/icon_02-1.gif") no-repeat center top;}
+
+.infoBox .px{background:url("../images/icon_03.gif") no-repeat center top;}
+.infoBox .px:hover{background:url("../images/icon_03-1.gif") no-repeat center top;}
+.infoBox .px1{background:url("../images/icon_03-1.gif") no-repeat center top;}
+
+.infoBox .bx{background:url("../images/icon_04.gif") no-repeat center top;}
+.infoBox .bx:hover{background:url("../images/icon_04-1.gif") no-repeat center top;}
+.infoBox .bx1{background:url("../images/icon_04-1.gif") no-repeat center top;}
+.infoBox .nr{background:rgba(255, 255, 255, 0.15) url("../images/bg_j.gif") no-repeat right bottom;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff); padding:50px; clear:both; margin-top:-10px;}
+.infoBox .nr .ms{ padding-left:380px; padding-top:80px; height:200px;font: normal 30px/60px "微软雅黑","宋体";color:#FFF;}
+.infoBox .nr .ms span{font: normal 18px/20px "微软雅黑","宋体"; display:block; margin-top:5px;}
+
+.infoBox .nr_aq{background:url("../images/bg_aq.png") no-repeat 50px center;}
+.infoBox .nr_jk{background:url("../images/bg_jk.png") no-repeat 50px center;}
+.infoBox .nr_px{background:url("../images/bg_px.png") no-repeat 50px center;}
+.infoBox .nr_bx{background:url("../images/bg_bx.png") no-repeat 50px center;}
+
+.cz{
+    width: 1000px;margin: 0 auto;height: 600px;position: relative;padding-top: 30px;
+}
+.cz:before{content: "";display: block;width: 64px;height: 64px;background: url("../images/icon_sj1.gif") no-repeat;background-size: 100%;position: absolute;left: 50%;margin-left: 32px}
+.cz:after{content: "";display: block;position: absolute;left: 50%;height: 506px;background: #c7ddef;width: 6px;margin-left: -3px}
+/*家政网点*/
+.info{background:url("../images/bg_info.gif") no-repeat center center; height:575px;}
+.info{ color:#fff;}
+.info .title{ font: bold 36px/50px "微软雅黑","宋体"; color:#333; text-align:center; margin-top:50px;}
+.info .sz{ float:left; width:333px; text-align:center;font: bold 42px/50px Georgia;}
+.info .lm{ padding-top:110px; padding-left:20px;}
+.info .dw{ padding-top:80px; text-align:left; padding-left:95px;}
+.info .fwz{ padding-top:90px; width:110px;}
+.info .wd{ padding-top:120px; padding-left:120px; text-align:left;}
+.info .ay{ padding-top:85px; padding-right:5px; float:right; color:#3996d4;}
+.info .ay a{ color:#3996d4;}
+.banner_1000 {width: 1000px;margin: 0 auto;}
+.bottom{ clear:both; text-align:center;font: normal 14px/40px  Arial, Helvetica, sans-serif,"微软雅黑","宋体"; padding-bottom:40px; height:50px; color:#333;}
+.bottom a{color: #333}
+.footer{ margin-top:-40px;height:40px;background:rgba(0, 0, 0, 0.6);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); text-align:center; color:#fff;font: normal 14px/40px  Arial, Helvetica, sans-serif,"微软雅黑","宋体";}
+
+.menu{background: #400000;;height: 40px;}
+.menu>a{display: block;position: relative;padding-left: 50px;line-height: 40px;color: #ecf0f1; text-decoration:none;padding-right: 10px;float: left}
+.menu>a:hover{background: rgba(240,240,240,0.5)}
+.menu>a:before{display: block;content: "";width: 30px;height:30px;position: absolute;left: 0;margin-left: 10px;top:5px}
+.menu>.phone:before{background: url("../images/icon-phone.png") no-repeat;background-size: 100%}
+.menu>.wx:before{background: url("../images/icon-wx.png") no-repeat;background-size: 100%}
+.menu>.qq:before{background: url("../images/icon-qq.png") no-repeat;background-size: 100%}
+.menu>.help:before{width: 1px;height: 34px;top:3px;background:#ecf0f1;margin-left: 0px;margin: 0;padding: 0}
+.menu>.help{padding-left: 20px}
+.menu>.login{float: right;margin-right: 60px;color: #ecf0f1;padding: 0 15px;height: 30px;border: 2px solid  #ecf0f1;line-height: 30px;margin-top: 3px;border-radius: 8px}
+.menu>.login:hover{background: rgba(240,240,240,0.5)}
