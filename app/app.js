@@ -4,7 +4,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.index',
-  'myApp.view2',
+  'myApp.school',
+  'myApp.login',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
@@ -12,9 +13,13 @@ config(['$routeProvider', function($routeProvider) {
     templateUrl: 'index/index.html',
     controller: 'IndexCtrl'
   });
-  $routeProvider.when('/view2', {
-    templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
+  $routeProvider.when('/school', {
+    templateUrl: 'school/school.html',
+    controller: 'SchoolCtrl'
+  });
+  $routeProvider.when('/login', {
+    templateUrl: 'school/login.html',
+    controller: 'LoginCtrl'
   });
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

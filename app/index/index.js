@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.index', ['ngRoute'])
+angular.module('myApp.index', ['ngRoute','myApp'])
 .controller('IndexCtrl', function($scope, $http) {
 //数据初始化
   var mySwiper = new Swiper('.swiper-container',{
@@ -34,10 +34,26 @@ angular.module('myApp.index', ['ngRoute'])
       window.location = GlobalHref.Reservation();
     });
   });
-
-  $scope.qty =28;
-  $scope.cost =1321;
-  $scope.msg ="ssssssssssssss";
+  $http({
+    method: 'get',
+    url: " http://localhost:3000/testData/test1.json",
+    //data:{
+    //  page:1
+    //}
+  }).success(function(data, status) {
+    console.log(data.a)
+    //$scope.names=data.data.records
+    // Now we have a list of the stories (data.list.story)
+    // in the data object that the NPR API
+    // returns in JSON that looks like:
+    // data: { "list": {
+    //   "title": ...
+    //   "story": [
+    //     { "id": ...
+    //       "title": ...
+  }).error(function(data, status) {
+    // Some error occurred
+  });
   /* ajax请求
 $http({
     method: 'get',
@@ -81,17 +97,22 @@ $http({
         template : '<div class="index_title"><div class="index_logo"></div>' +
         '          <div class="index_login">' +
         '          <a class="index_login_btn" href="#/">首页</a>' +
-        '          <a class="index_login_btn" href="#/view2">家策商学院</a>' +
+        '          <a class="index_login_btn" href="#/school">家策商学院</a>' +
         '          </div>' +
         '          </div>'
       };
-    })
-.directive("runoobDirective", function() {
+    })  .directive("menuDiv", function() {
 //自定义模块
-  return {
-    template : "<h1>自定义指令2!</h1>"
-  };
-})
+      return {
+        template : '<div class="menu">' +
+        '        <a class="phone" href="javascript:void(0)">手机版</a>' +
+        '          <a class="wx" href="javascript:void(0)">官方微信</a>' +
+        '          <a class="qq" href="javascript:void(0)">官方QQ</a>' +
+        '          <a class="help" href="javascript:void(0)">帮助中心</a>' +
+        '          <a class="login" href="#/login">登录</a>' +
+        '          </div>'
+      };
+    })
 .directive("myDctv", function() {
 //自定义模块
   return function(scope, element, attrs) {

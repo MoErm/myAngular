@@ -1,10 +1,4 @@
-<div class="menu">
-   <a class="phone" href="javascript:void(0)">手机版</a>
-   <a class="wx" href="javascript:void(0)">官方微信</a>
-   <a class="qq" href="javascript:void(0)">官方QQ</a>
-   <a class="help" href="javascript:void(0)">帮助中心</a>
-  <a class="login" href="javascript:void(0)">登录</a>
-</div>
+<menu-div></menu-div>
 <title-div></title-div>
 <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -46,10 +40,10 @@
     </div>
 </div>
 <div class="cz">
-    <div>2016/6/7 成立</div>
-    <div>2016/6/7 成立</div>
-    <div>2016/6/7 成立</div>
-    <div>2016/6/7 成立</div>
+    <div class="cz_left_1">2016/6/7 成立</div>
+    <div class="cz_right_1">2016/6/7 成立</div>
+    <div  class="cz_left_2">2016/6/7 成立</div>
+    <div class="cz_right_2">2016/6/7 成立</div>
 </div>
 
 <div class="bottom">
@@ -57,49 +51,3 @@
 <div class="footer">
     Copyright © 2014.&nbsp;上海互家联家庭服务有限公司&nbsp;版权所有. <a href="http://www.miibeian.gov.cn/?tp=1.0.20.0.17.KcvSgN6" target="_blank" style="color:#fff;">沪ICP备B2-20040259-7</a></div>
 
-
-
-<p>This is the partial for view 1.</p>
-<b>Invoice:</b>
-<br>
-<br>
-<table>
-    <tr><td >Quantity</td><td>Cost</td></tr>
-    <tr>
-        <td><input type="integer" min="0" ng-model="qty" required ></td>
-        <td><input type="number" ng-model="cost" required ></td>
-    </tr>
-</table>
-<runoob-directive></runoob-directive>
-<my-dctv >
-    {{msg | myUpperFilter }}
-</my-dctv >
-<h5>{{ clock }}</h5>
-<button ng-click="test()">隐藏/显示</button>
-<div  ng-init="points=[1,15,13,9,2,40,22,78]">
-
-    <p>第三个值为 {{ points[2] }}</p>
-    <p>使用 ng-repeat 来循环数组</p>
-    <p>使用 ng-repeat 来循环数组</p>
-    <ul>
-        <li ng-repeat="x in points">
-            {{ x }}
-        </li>
-    </ul>
-</div>
-
-<form ng-app="" name="myForm">
-    Email:
-    <input type="email" name="myAddress" ng-model="text">
-    <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
-</form>
-<input name="myName" ng-model="myText" required>
-<ul>
-    <li ng-repeat="x in names">{{x.ransomAmount}}
-        {{x.ransomDate}}
-        {{x.ransomId}}
-        {{x.ransomStatusDesc}}
-    </li>
-</ul>
-<hr>
-<b>Total:</b> {{qty * cost | currency}}

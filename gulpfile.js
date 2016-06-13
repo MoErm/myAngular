@@ -1,7 +1,8 @@
-var gulp = require('gulp');
-var clean = require('gulp-clean');//文件夹清理
-var browserSync = require('browser-sync');//本地服务器
-var uglify = require('gulp-uglify');//代码压缩混淆
+var gulp = require('gulp'),
+minifycss = require('gulp-minify-css'),
+clean = require('gulp-clean'),//文件夹清理
+browserSync = require('browser-sync'),//本地服务器
+uglify = require('gulp-uglify');//代码压缩混淆
 
 // Start the server
 gulp.task('browser-sync', function() {
@@ -32,20 +33,20 @@ gulp.src('./bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.mi
     .pipe(gulp.dest('./dest/vender/js'));
 gulp.src('./bower_components/html5-boilerplate/dist/css/*.css')
     .pipe(gulp.dest('./dest/css'));
-return gulp.src('./bower_components/angular/angular.js')
+return gulp.src('./bower_components/angular/angular.min.js')
     .pipe(gulp.dest('./dest/vender/js'));
 });
 //压缩混淆js
 gulp.task('view', function() { 
 gulp.src('./app/components/version/*.js')
 .pipe(gulp.dest('./dest/components/version'));
-gulp.src('./app/view2/*.js')
+gulp.src('./app/school/*.js')
 .pipe(uglify({
             mangle: {
                 except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window']
             }
         }))
-.pipe(gulp.dest('./dest/view2'));
+.pipe(gulp.dest('./dest/school'));
 //关键字取消混淆，避免angular注入报错
 return gulp.src('./app/index/*.js')
 .pipe(uglify({
@@ -57,8 +58,8 @@ return gulp.src('./app/index/*.js')
 });
 //html导入
 gulp.task('html', function() { 
-gulp.src('./app/view2/*.html')
-    .pipe(gulp.dest('./dest/view2'));
+gulp.src('./app/school/*.html')
+    .pipe(gulp.dest('./dest/school'));
 gulp.src('./app/index/*.html')
     .pipe(gulp.dest('./dest/index'));
 return 
@@ -73,8 +74,12 @@ gulp.task('images', function() {
 gulp.task('file', function() { 
 gulp.src('./app/*.js')
     .pipe(gulp.dest('./dest'));
-gulp.src('./app/styles/app.css')
-    .pipe(gulp.dest('./dest/css'));
+gulp.src('./app/testData/*.*')
+    .pipe(gulp.dest('./dest/testData'));
+gulp.src('./app/styles/*.css')
+    .pipe(minifycss())
+    .pipe(gulp.dest('./dest/css'))
+    ;
 return gulp.src('./app/index.html')
 .pipe(gulp.dest('./dest'));
 });
