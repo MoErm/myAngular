@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('myApp.index', ['ngRoute','myApp'])
-.controller('IndexCtrl', function($scope, $http) {
+app.controller('IndexCtrl', function($scope, $http) {
 //数据初始化
   var mySwiper = new Swiper('.swiper-container',{
     loop: true,
@@ -123,5 +122,11 @@ $http({
       element.css("background", "none");
     });
   }
-});
+})
+    .directive("clear",function(){
+      return {
+        replace:true,
+        template:'<div class="clear"></div>'
+      }
+    });
 

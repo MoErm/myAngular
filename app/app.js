@@ -1,11 +1,8 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+var app = angular.module('myApp', [
   'ngRoute',
-  'myApp.index',
-  'myApp.school',
-  'myApp.login',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
@@ -20,6 +17,10 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/login', {
     templateUrl: 'school/login.html',
     controller: 'LoginCtrl'
+  });
+  $routeProvider.when('/sign/:id', {
+    templateUrl: 'school/sign.html',
+    controller: 'SignCtrl'
   });
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

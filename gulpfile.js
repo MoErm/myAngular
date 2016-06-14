@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 minifycss = require('gulp-minify-css'),
 clean = require('gulp-clean'),//文件夹清理
 browserSync = require('browser-sync'),//本地服务器
+concat = require('gulp-concat'),//js合并
 uglify = require('gulp-uglify');//代码压缩混淆
 
 // Start the server
@@ -40,21 +41,16 @@ return gulp.src('./bower_components/angular/angular.min.js')
 gulp.task('view', function() { 
 gulp.src('./app/components/version/*.js')
 .pipe(gulp.dest('./dest/components/version'));
-gulp.src('./app/school/*.js')
+gulp.src(['./app/app.js','./app/school/*.js','./app/index/*.js'])
+    .pipe(concat('app.js'))
 .pipe(uglify({
             mangle: {
-                except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window']
+                except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window','$routeParams','$location']
             }
         }))
-.pipe(gulp.dest('./dest/school'));
+.pipe(gulp.dest('./dest'));
 //关键字取消混淆，避免angular注入报错
-return gulp.src('./app/index/*.js')
-.pipe(uglify({
-            mangle: {
-                except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window']
-            }
-        }))
-.pipe(gulp.dest('./dest/index'));
+return
 });
 //html导入
 gulp.task('html', function() { 

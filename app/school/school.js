@@ -1,9 +1,7 @@
 'use strict';
 
-angular.module('myApp.school', ['ngRoute','myApp.index'])
-.controller('SchoolCtrl', function($scope, $http) {
+app.controller('SchoolCtrl', function($scope, $http) {
 //测试数据
-
 
 })
     .directive("schoolMenu", function() {
@@ -16,7 +14,7 @@ angular.module('myApp.school', ['ngRoute','myApp.index'])
           '            <a href="#/">首页</a>' +
           '            <a>学院介绍</a>' +
           '            <a>培训课程</a>' +
-          '            <a>立即报名</a>' +
+          '            <a  href="#/sign/4321">立即报名</a>' +
           '            </div>' +
           '         </div>'
       };
