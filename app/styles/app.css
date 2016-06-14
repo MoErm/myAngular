@@ -17,6 +17,7 @@ Basic Swiper Styles
 ================================================================*/
 *{font-family: "Microsoft YaHei";}
 a{ text-decoration:none;}
+ul li,ul,li{list-style:none;}
 body{min-width: 1000px}
 .swiper-container {
     margin:0 auto;
@@ -232,15 +233,20 @@ Pagination Styles
     line-height: 30px;
 }
 .index_tab{
-
+    padding-top: 30px;
 }
+
+.index_tab ul li:hover{cursor:pointer;}
 .index_tab ul li{
     list-style:none;
     display: block;
     width: 150px;
     text-align: center;
     float: left;
-    border-top: 5px solid #fdbd23;
+    border-top: 5px solid #fce7bd;
+}
+.cur{
+    border-top: 5px solid #fdbd23!important;
 }
 .banner_1000 {width: 1000px;margin: 0 auto;}
 .bottom{ clear:both; text-align:center;font: normal 14px/40px  Arial, Helvetica, sans-serif,"微软雅黑","宋体"; margin-bottom:40px; height:50px; color:#333;}
