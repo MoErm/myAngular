@@ -90,43 +90,22 @@ $http({
     return input.toUpperCase();
   }
 })
-    .directive("titleDiv", function() {
+.directive("titleDiv", function() {
 //自定义模块
-      return {
-        template : '<div class="index_title"><div class="index_logo"></div>' +
-        '          <div class="index_login">' +
-        '          <a class="index_login_btn" href="#/">首页</a>' +
-        '          <a class="index_login_btn" href="#/school">家策商学院</a>' +
-        '          </div>' +
-        '          </div>'
-      };
-    })  .directive("menuDiv", function() {
-//自定义模块
-      return {
-        template : '<div class="menu">' +
-        '        <a class="phone" href="javascript:void(0)">手机版</a>' +
-        '          <a class="wx" href="javascript:void(0)">官方微信</a>' +
-        '          <a class="qq" href="javascript:void(0)">官方QQ</a>' +
-        '          <a class="help" href="javascript:void(0)">帮助中心</a>' +
-        '          <a class="login" href="#/login">登录</a>' +
-        '          </div>'
-      };
-    })
-.directive("myDctv", function() {
-//自定义模块
-  return function(scope, element, attrs) {
-    element.bind("mouseenter", function() {
-      element.css("background", "red");
-    });
-    element.bind("mouseleave", function() {
-      element.css("background", "none");
-    });
-  }
+  return {
+    template : '<div class="index_title"><div class="index_logo"></div>' +
+    '          <div class="index_login">' +
+    '          <a class="index_login_btn" href="#/">首页</a>' +
+    '          <a class="login_school" href="#/school">家策商学院</a>' +
+    '          </div>' +
+    '<a href="#/login" class="index_login_btn2">登录</a>' +
+    '          </div>'
+  };
 })
-    .directive("clear",function(){
-      return {
-        replace:true,
-        template:'<div class="clear"></div>'
-      }
-    });
+.directive("clear",function(){
+  return {
+    replace:true,
+    template:'<div class="clear"></div>'
+  }
+});
 
