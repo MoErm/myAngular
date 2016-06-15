@@ -233,26 +233,63 @@ Pagination Styles
     line-height: 30px;
 }
 .index_tab{
-    padding-top: 30px;
+    padding-top: 100px;
+    width: 50%;
 }
 
 .index_tab ul li:hover{cursor:pointer;}
 .index_tab ul li{
+    padding-top: 20px;
     list-style:none;
     display: block;
     width: 150px;
     text-align: center;
     float: left;
     border-top: 5px solid #fce7bd;
+    color: rgba(253,189,35,0.5);
+    position: relative;
 }
 .cur{
+    color: black!important;
     border-top: 5px solid #fdbd23!important;
 }
+.tab_1:after,.tab_2:after,.tab_3:after{
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 120px;
+    background: url("../images/baka3.png") no-repeat;
+    background-size: 324px 124px;
+    opacity: 0.5;
+    bottom: 0;
+    margin-bottom: -140px;
+    left: 50%;
+    margin-left: -45px;
+}
+.tab_1:after{background-position: 10px 0;}
+.tab_2:after{background-position: -115px 0;}
+.tab_3:after{background-position: -240px 0;}
+.cur:after{opacity: 1}
+.index_info{
+    padding: 50px;
+    width: 50%;
+    float: right;
+    line-height: 30px;
+}
+
 .banner_1000 {width: 1000px;margin: 0 auto;}
 .bottom{ clear:both; text-align:center;font: normal 14px/40px  Arial, Helvetica, sans-serif,"微软雅黑","宋体"; margin-bottom:40px; height:50px; color:#333;}
 .bottom a{color: #333}
-.footer{ margin-top:-40px;height:40px;background:rgba(0, 0, 0, 0.6);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); text-align:center; color:#fff;font: normal 14px/40px  Arial, Helvetica, sans-serif,"微软雅黑","宋体";}
-
+.footer{ position:relative;margin-top:-40px;height:40px;background:rgba(0, 0, 0, 0.6);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000); text-align:right;padding-right: 20px; color:#fff;font: normal 14px/40px  Arial, Helvetica, sans-serif,"微软雅黑","宋体";}
+.footer>a{
+    font: normal 14px/40px  Arial, Helvetica, sans-serif,"微软雅黑","宋体";
+}
+.footer>p{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 20px;
+}
 .menu{background: #400000;;height: 40px;}
 .menu>a{display: block;position: relative;padding-left: 50px;line-height: 40px;color: #ecf0f1; text-decoration:none;padding-right: 10px;float: left}
 .menu>a:hover{background: rgba(240,240,240,0.5)}
@@ -266,10 +303,10 @@ Pagination Styles
 .menu>.login:hover{background: rgba(240,240,240,0.5)}
 
 .clear{clear: both}
-.school_title{height: 90px;border-bottom:4px solid #e69b29;}
+.school_title{height: 90px;margin: 0 auto;max-width: 1000px}
 .school_logo{float: left;margin-left: 30px;margin-top: 10px}
-.school_menu{float: right;height: 80px;margin-right: 30px}
-.school_menu>a{margin-top: 60px;display: inline-block;text-decoration:none;color: black}
+.school_menu{height: 40px}
+
 .school_sys{width: 100%;margin: 10px auto;min-width: 100px;height: 200px;}
 .school_content{width: 65%;height: 700px;float: left;position: relative;margin-bottom: 30px}
 .school_container{max-width: 1000px;width: 100%;margin: 0 auto;padding: 20px;}
