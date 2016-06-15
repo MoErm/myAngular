@@ -6,33 +6,14 @@ app.controller('IndexCtrl', function($scope, $http) {
     loop: true,
     autoplay: 3000,
   });
+  $scope.tabChange=function(num){
+    $(".cur").removeClass("cur")
+    $("#tab_"+num).addClass("cur")
+    $(".index_info>ul>li").hide()
+    $("#tab_text_"+num).removeClass("hidden")
+    $("#tab_text_"+num).show()
+  }
 
-  $(function () {
-    $("ul.bh >li").hover(function () {
-      $("ul.bh >li.aq1").removeClass("aq1").addClass("aq");
-
-      $("div.nr >div.ms").hide();
-      $("ul.bh >li.li1").removeClass("li1");
-      $(this).addClass("li1");
-
-      if ($(this).hasClass("aq")) {
-        $("div.nr >div.nr_aq").show();
-      }
-      if ($(this).hasClass("jk")) {
-        $("div.nr >div.nr_jk").show();
-      }
-      if ($(this).hasClass("px")) {
-        $("div.nr >div.nr_px").show();
-      }
-      if ($(this).hasClass("bx")) {
-        $("div.nr >div.nr_bx").show();
-      }
-    });
-
-    $(".btn_yy").click(function () {
-      window.location = GlobalHref.Reservation();
-    });
-  });
   $http({
     method: 'get',
     url: " http://localhost:3000/testData/test1.json",
