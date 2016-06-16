@@ -294,9 +294,6 @@ Pagination Styles
 .menu>a{display: block;position: relative;padding-left: 50px;line-height: 40px;color: #ecf0f1; text-decoration:none;padding-right: 10px;float: left}
 .menu>a:hover{background: rgba(240,240,240,0.5)}
 .menu>a:before{display: block;content: "";width: 30px;height:30px;position: absolute;left: 0;margin-left: 10px;top:5px}
-.menu>.phone:before{background: url("../images/icon-phone.png") no-repeat;background-size: 100%}
-.menu>.wx:before{background: url("../images/icon-wx.png") no-repeat;background-size: 100%}
-.menu>.qq:before{background: url("../images/icon-qq.png") no-repeat;background-size: 100%}
 .menu>.help:before{width: 1px;height: 34px;top:3px;background:#ecf0f1;margin-left: 0px;margin: 0;padding: 0}
 .menu>.help{padding-left: 20px}
 .menu>.login{float: right;margin-right: 60px;color: #ecf0f1;padding: 0 15px;height: 30px;border: 2px solid  #ecf0f1;line-height: 30px;margin-top: 3px;border-radius: 8px}
@@ -305,7 +302,19 @@ Pagination Styles
 .clear{clear: both}
 .school_title{height: 90px;margin: 0 auto;max-width: 1000px}
 .school_logo{float: left;margin-left: 30px;margin-top: 10px}
-.school_menu{height: 40px}
+.school_menu{height: 40px;background-color: #25201d}
+.school_menu>.school_menu_box{width: 1000px;margin: 0 auto}
+.school_menu>.school_menu_box>a{display: inline-block;width: 90px;height: 40px;background-color: #25201d;text-align: center;line-height: 40px;color: #f6871e}
+.school_menu>.school_menu_box>a:hover{background-color: #f6871e;color: #25201d}
+.school_menu>.school_menu_box>.sel{background-color: #f6871e;color: #25201d}
+.school_login_menu{width: 1000px;margin: 0 auto;text-align: right;height: 50px}
+.school_login_menu a{display: inline-block;height: 50px;line-height: 50px;text-align: center}
+.school_login_menu>.tab_login,.school_login_menu>.tab_sign{width: 60px;position: relative}
+.school_login_menu>.tab_help{width: 90px;position: relative}
+.school_login_menu>.tab_login:after,.school_login_menu>.tab_sign:after,.school_login_menu>.tab_phone:after,.school_login_menu>.tab_help:after{content: "";display: block;position: absolute;width: 1px;height: 30px;top:10px;right: 0;background-color: black}
+.school_login_menu>.tab_phone{width: 100px;position: relative;padding-left: 20px}
+.school_login_menu>.tab_phone:before{background: url("../images/school_phone.png")no-repeat;height:40px;width: 30px;display: block;left:5px;top:9px;content: "";background-size: 100%;position: absolute }
+.tab_wei>img,.tab_qq>img{width: 25px;margin:0 5px}
 
 .school_sys{width: 100%;margin: 10px auto;min-width: 100px;height: 200px;}
 .school_content{width: 65%;height: 700px;float: left;position: relative;margin-bottom: 30px}
