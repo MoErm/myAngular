@@ -1,4 +1,29 @@
-<menu-div></menu-div>
-<school-menu></school-menu>
+<school-logo></school-logo>
+<school-menu bao="sel"></school-menu>
+<school-login-menu></school-login-menu>
 <clear></clear>
-sign
+<div class="school_container sign_box">
+    <h2>报名信息</h2>
+    <div class="sign_input"><span>姓名&ensp;&ensp;&ensp;&ensp;<input type="text"></span><span>培训日期<input type="text"></span></div>
+    <div class="sign_input"><span>联系电话<input type="text"></span><span>培训课程<select>
+        <option ng-repeat="item in jobs">{{item.job}}</option>
+    </select></span></div>
+    <a class="sign_btn">立即报名</a>
+</div>
+<div class="school_container">
+    <h2>培训地址</h2>
+    <div class="sign_address">
+
+        </br>
+        <p>报名/咨询电话：</br>021-6418 3797； 130 0313 1206 （翁老师）</p>
+        </br>
+        <p>联系地址：</br>上海市徐汇区凯旋路3500号华苑大厦1座19楼A室（华亭宾馆北面）</p>
+        </br>
+        <p>交通方式：</br>地铁1、4号线上海体育馆站7号出口；</br>地铁3号线漕溪路站；地铁11号线上海游泳馆站；</br>公交87、89、138、721、808中山西路漕溪路站</p>
+    </div>
+    <div class="sign_map">
+        <img src="./images/sign_map.png" width="100%">
+    </div>
+</div>
+<clear></clear>
+<foot-div></foot-div>

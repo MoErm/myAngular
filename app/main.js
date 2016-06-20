@@ -8,7 +8,7 @@
 $script([
     'vender/js/jquery.min.js',
     'vender/js/angular-route.min.js',
-    'app.js',
+    'views/app.js',
     'config.js',
     //'index/index.js',
     //'school/views.js',

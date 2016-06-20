@@ -13,7 +13,7 @@ app.controller('IndexCtrl', function($scope, $http) {
     $("#tab_text_"+num).removeClass("hidden")
     $("#tab_text_"+num).show()
   }
-
+      /*
   $http({
     method: 'get',
     url: " http://localhost:3000/testData/test1.json",
@@ -34,7 +34,7 @@ app.controller('IndexCtrl', function($scope, $http) {
   }).error(function(data, status) {
     // Some error occurred
   });
-  /* ajax请求
+ ajax请求
 $http({
     method: 'get',
     url: "http://test.jiaxinmore.com/apps/api/demand/getUserRansomRecords",
@@ -56,13 +56,6 @@ $http({
     // Some error occurred
   });
 */
-  var updateClock = function() {    $scope.clock = new Date();  };
-  var timer = setInterval(function() {    $scope.$apply(updateClock);  }, 1000);
-  updateClock();
-
-  $scope.names = function() {
-    return $scope.firstName + " " + $scope.lastName;
-  }
 
 })
 .filter("myUpperFilter", function() {
@@ -74,13 +67,13 @@ $http({
 .directive("titleDiv", function() {
 //自定义模块
   return {
-    template : '<div class="index_title"><div class="index_logo"></div>' +
+    template : '<div class="school_container"><div class="index_title"><div class="index_logo"></div>' +
     '          <div class="index_login">' +
     '          <a class="index_login_btn" href="#/">首页</a>' +
     '          <a class="login_school" href="#/school">家策商学院</a>' +
     '          </div>' +
     '<a href="#/login" class="index_login_btn2">登录</a>' +
-    '          </div>'
+    '          </div></div>'
   };
 })
 .directive("clear",function(){
@@ -88,5 +81,13 @@ $http({
     replace:true,
     template:'<div class="clear"></div>'
   }
-});
+}).directive("footDiv", function() {
+//自定义模块
+  return {
+    template : '<div class="footer">' +
+    '<p>© 2016 jiacer.com</p>' +
+    '上海市徐汇区凯旋路3500号华苑大厦1座19楼A室&ensp;&ensp;&ensp;<a href="http://www.miibeian.gov.cn/?tp=1.0.20.0.17.KcvSgN6" target="_blank" style="color:#fff;">沪ICP备16022947号-1</a></div>'
+  };
+})
+
 

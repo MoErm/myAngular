@@ -1,0 +1,31 @@
+<school-logo></school-logo>
+<school-menu train="sel"></school-menu>
+<school-login-menu></school-login-menu>
+<clear></clear>
+<div class="school_container">
+    <div class="train_menu">
+        <section class="link-my">
+            <div ng-repeat="item in jobs">
+            <a  ng-click="changTab($index)" class="{{$index|myFilter:index }}">{{item.job}}</a>
+            </div>
+        </section>
+    </div>
+    <div class="train_records">
+        <div class="train_contact">{{contact}}</div>
+        <div  ng-repeat="item in records">
+            <div class="train_record">
+                <h3>{{item.position}}</h3>
+                <p>课程介绍: {{item.introduce}}</p>
+                <p>课程费用: {{item.fee}}</p>
+                <p>课程时间: {{item.time}}</p>
+                <p>授课专家: {{item.teacher}}</p>
+                <p>就业方向: {{item.work}}</p>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<clear></clear>
+<foot-div></foot-div>

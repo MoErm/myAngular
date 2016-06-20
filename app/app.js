@@ -18,7 +18,15 @@ config(['$routeProvider', function($routeProvider) {
     templateUrl: 'school/login.html',
     controller: 'LoginCtrl'
   });
-  $routeProvider.when('/sign/:id', {
+  $routeProvider.when('/about', {
+    templateUrl: 'school/about.html',
+    controller: 'AboutCtrl'
+  });
+  $routeProvider.when('/train', {
+    templateUrl: 'school/train.html',
+    controller: 'TrainCtrl'
+  });
+  $routeProvider.when('/sign', {
     templateUrl: 'school/sign.html',
     controller: 'SignCtrl'
   });

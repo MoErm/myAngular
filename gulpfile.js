@@ -48,7 +48,7 @@ gulp.src(['./app/app.js','./app/school/*.js','./app/index/*.js'])
                 except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window','$routeParams','$location']
             }
         }))
-.pipe(gulp.dest('./dest'));
+.pipe(gulp.dest('./dest/views'));
 //关键字取消混淆，避免angular注入报错
 return
 });
