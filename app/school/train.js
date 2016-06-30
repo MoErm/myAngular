@@ -7,10 +7,10 @@ app.controller('TrainCtrl', function($scope, $routeParams, $location,$http) {
         $scope.contact=$scope.jobs[$scope.index].contact
         $scope.records=$scope.jobs[$scope.index].records
     }
-    $scope.index=0
+    $scope.index=$routeParams.job-1;
     $http({
         method: 'get',
-        url: "http://"+window.location.host+"/dist/angular/testData/train.json",
+        url: "http://"+window.location.host+"/testData/train.json",
         //url: "http://"+window.location.host+"/testData/train.json",
     }).success(function(data, status) {
         $scope.jobs=data.data
@@ -21,6 +21,7 @@ app.controller('TrainCtrl', function($scope, $routeParams, $location,$http) {
     }).error(function(data, status) {
         // Some error occurred
     });
+
 
 }).filter("myFilter", function() {
 //自定义过滤

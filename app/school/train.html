@@ -1,12 +1,11 @@
 <school-logo></school-logo>
 <school-menu train="sel"></school-menu>
-<school-login-menu></school-login-menu>
 <clear></clear>
 <div class="school_container">
     <div class="train_menu">
         <section class="link-my">
-            <div ng-repeat="item in jobs">
-            <a  ng-click="changTab($index)" class="{{$index|myFilter:index }}">{{item.job}}</a>
+            <div >
+            <a ng-repeat="item in jobs" ng-click="changTab($index)" class="{{$index|myFilter:index }}">{{item.job}}</a>
             </div>
         </section>
     </div>

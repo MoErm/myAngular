@@ -45,7 +45,7 @@ gulp.src(['./app/app.js','./app/school/*.js','./app/index/*.js'])
     .pipe(concat('app.js'))
 .pipe(uglify({
             mangle: {
-                except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window','$routeParams','$location']
+                except: ['$super', '$', 'exports', 'require', 'module','$scope','$http','$window','$routeParams','$location','$locationProvider']
             }
         }))
 .pipe(gulp.dest('./dest/views'));

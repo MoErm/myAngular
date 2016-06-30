@@ -5,30 +5,25 @@ var app = angular.module('myApp', [
   'ngRoute',
   'myApp.version'
 ]).
-config(['$routeProvider', function($routeProvider) {
+config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
   $routeProvider.when('/', {
     templateUrl: 'index/index.html',
     controller: 'IndexCtrl'
-  });
-  $routeProvider.when('/school', {
+  }).when('/school/index', {
     templateUrl: 'school/school.html',
     controller: 'SchoolCtrl'
-  });
-  $routeProvider.when('/login', {
+  }).when('/user/login', {
     templateUrl: 'school/login.html',
     controller: 'LoginCtrl'
-  });
-  $routeProvider.when('/about', {
+  }).when('/school/about', {
     templateUrl: 'school/about.html',
     controller: 'AboutCtrl'
-  });
-  $routeProvider.when('/train', {
+  }).when('/school/train/:job', {
     templateUrl: 'school/train.html',
     controller: 'TrainCtrl'
-  });
-  $routeProvider.when('/sign', {
+  }).when('/school/sign', {
     templateUrl: 'school/sign.html',
     controller: 'SignCtrl'
-  });
-  $routeProvider.otherwise({redirectTo: '/'});
+  }).otherwise({redirectTo: '/'});
+  $locationProvider.html5Mode(true);
 }]);

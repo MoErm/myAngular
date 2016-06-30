@@ -32,6 +32,8 @@ body{min-width: 1000px}
     z-index:1;
 }
 .swiper-wrapper {
+    height:auto!important;
+    max-height:400px!important;
     position:relative;
     width:100%;
     -webkit-transition-property:-webkit-transform, left, top;
@@ -99,13 +101,13 @@ sizes, pagination, etc.
 }
 .swiper-slide {
     /* Specify Slides's Size: */
-
+    max-height: 400px!important;
     /*width: 100%;
     height: 100%;*/
 }
 .swiper-slide-active {
     /* Specific active slide styling: */
-
+    height:auto
 }
 .swiper-slide-visible {
     /* Specific visible slide styling: */
@@ -144,10 +146,21 @@ Pagination Styles
     background: #FF8604;
 }
 .swiper-slide {
-    line-height: 300px;
-    color: #fff;
-    font-size: 36px;
     text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
 }
 
 /* app css stylesheet */
@@ -164,7 +177,7 @@ Pagination Styles
     background-size: 100%;
 }
 .index_login{
-    margin: 0px auto 0 auto;
+    margin: 0px 70px 0 auto;
     width: 300px;
     padding-top: 30px;
     padding-bottom: 10px;
@@ -187,11 +200,22 @@ Pagination Styles
     padding: 5px 15px;
     border-radius: 30px;
     border: 2px solid white;
-    color: #087cc9;
+    color: black;
+}
+.login_school:after{
+    content: "";
+    width: 1px;
+    height: 30px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    margin-right: -15px;
 }
 .login_school:hover{
-    border: 2px solid #087cc9;
-    background: rgba(8,124,201,0.4);
+    border: 2px solid #fdbd25;
+    background: rgba(253,189,37,0.4);
     color: white;
 }
 .index_login_btn:hover{
@@ -203,18 +227,18 @@ Pagination Styles
 .index_login_btn2{
     position: absolute;
     right: 30px;
-    margin-top: 23px;
+    margin-top: 30px;
     top: 0;
-    padding: 5px 15px;
+    font-size: 12px;
+    padding: 3px 13px;
     border-radius: 30px;
-    color: white;
-    background-color: #fdbd25;
-    border: 2px solid white;
+    border: 1px solid black;
+    color: black;
 }
 .index_login_btn2:hover{
+    border: 1px solid #fdbd25;
     background: rgba(253,189,37,0.4);
-    border: 2px solid #fdbd25;
-    color: #fdbd25;
+    color: white;
 }
 .index_container{
 
@@ -301,33 +325,45 @@ Pagination Styles
 
 .clear{clear: both}
 .school_title{height: 90px;margin: 0 auto;max-width: 1000px}
-.school_logo{float: left;margin-top: 10px}
+.school_logo{float: left;margin-top: 10px;width: 250px}
+.school_logo img{width: 100%}
 .school_menu{height: 40px;background-color: #25201d}
-.school_menu>.school_menu_box{width: 1000px;margin: 0 auto}
-.school_menu>.school_menu_box>a{display: inline-block;width: 110px;height: 40px;background-color: #25201d;text-align: center;line-height: 40px;color: #f6871e}
-.school_menu>.school_menu_box>a:hover{background-color: #f6871e;color: #25201d}
-.school_menu>.school_menu_box>.sel{background-color: #f6871e;color: #25201d}
-.school_login_menu{width: 1000px;margin: 0 auto;text-align: right;height: 50px}
+.school_menu>.school_menu_box{width: 1000px;margin: 10px auto 0 auto}
+.school_menu>.school_menu_box>a{display: inline-block;width: 110px;height: 40px;background-color: #25201d;text-align: center;line-height: 40px;color: #ffffff}
+.school_menu>.school_menu_box>a:hover{background-color: #f6871e;color: #ffffff}
+.school_menu>.school_menu_box>.sel{background-color: #f6871e;color: #ffffff}
+.school_login_menu{position: relative;width: 1000px;margin: 0 auto;text-align: right;padding-top: 40px}
 .school_login_menu a{display: inline-block;height: 50px;line-height: 50px;text-align: center;color:#25201d }
 .school_login_menu>.tab_login,.school_login_menu>.tab_sign{width: 60px;position: relative}
+.school_login_menu>.tab_login{    padding: 3px 13px;border-radius: 30px;font-size: 12px;    border: 1px solid #000;        height: 30px;
+    line-height: 22px;}
 .school_login_menu>.tab_help{width: 90px;position: relative}
-.school_login_menu>.tab_login:after,.school_login_menu>.tab_sign:after,.school_login_menu>.tab_phone:after,.school_login_menu>.tab_help:after{content: "";display: block;position: absolute;width: 1px;height: 30px;top:10px;right: 0;background-color: black}
+.school_login_menu>.tab_sign:after,.school_login_menu>.tab_phone:after,.school_login_menu>.tab_help:after{content: "";display: block;position: absolute;width: 1px;height: 30px;top:10px;right: 0;background-color: black}
 .school_login_menu>.tab_phone{width: 100px;position: relative;padding-left: 20px}
 .school_login_menu>.tab_phone:before{background: url("../images/school_phone.png")no-repeat;height:40px;width: 30px;display: block;left:5px;top:9px;content: "";background-size: 100%;position: absolute }
+.school_login_menu>.twoCode{position: absolute;z-index: 9999;width: 120px; right: 0;display: none}
+.school_login_menu>.twoCode img{width: 120px; }
+
 .tab_wei>img,.tab_qq>img{width: 25px;margin:0 5px}
 .school_banner{max-width: 1000px;margin: 0 auto;position: relative}
 .school_cycle{background-color: #eed0c0}
 .school_bao{text-align: right;padding-bottom: 40px}
-.about_text{border: 3px solid #f6871e;padding: 20px;margin-top: 20px}
+.about_text{margin-top: 20px}
 .about_text p{margin: 20px;line-height: 30px}
 .school_sys_area{padding-bottom: 20px}
-.school_sys{width: 100%;margin: 10px auto;position: relative;padding-left: 30px}
+.school_sys{width: 100%;margin: 10px auto;position: relative;padding-left: 30px;font-size: 1.2rem}
 .school_sys:before{content: "";display: block;position: absolute;height: 20px;width: 20px;background-color: #f6871e;left: 0;margin-left: 00px;top:0;margin-top: 1px}
 .school_content{width: 100%;height: 730px;float: left;position: relative;margin-bottom: 30px;}
 .school_container{max-width: 1000px;width: 100%;margin: 0 auto;}
-.school_env{width: 100%;float: right;border: 3px solid #f6871e;margin-left: 5%;margin-bottom: 30px}
+.school_env{width: 100%;float: right;margin-left: 5%;margin-bottom: 50px}
 .school_env div{padding: 15px;width: 33%;float: left}
-.school_env div img{width: 100%;max-height: 330px}
+.school_env div img{width: 100%;max-height: 330px;-webkit-filter: grayscale(1);/* Webkit */
+    cursor:pointer;
+    filter:gray;/* IE6-9 */
+    filter: grayscale(1);/* W3C */}
+.school_env div img:hover{-webkit-filter: none;/* Webkit */
+    filter:none;/* IE6-9 */
+    filter: none;/* W3C */ }
 .school_img_1{position: absolute;height: 400px;width: 600px;}
 .school_img_2{position: absolute;height: 250px;width: 400px;margin-left: 600px}
 .school_img_3{position: absolute;height: 298px;width: 600px;margin-top: 400px}
@@ -367,7 +403,9 @@ input:focus {outline: none;}
     color: #f6871e;
 }
 .sign_box{
+    margin-top: 20px;
     border-bottom: 2px solid #f6871e;
+    margin-bottom: 20px;
 }
 .sign_address{
     width: 50%;
@@ -380,22 +418,26 @@ input:focus {outline: none;}
     padding: 20px;
 }
 
-.train_menu{width: 15%;text-align: center;float: left}
-.train_records{width: 85%;float: left;padding: 20px;border: 1px solid #25201d; z-index: 900;margin-bottom:50px}
-.train_contact{background-color: rgba(246,135,30,0.2);padding: 20px;color: #25201d;}
+.school_nengli{width: 100%;font-size: 2rem;text-align: center;background-color:  rgba(246,153,30,0.3);padding: 30px}
+.school_nengli_str{color: #f6871e}
+
+.train_menu{width: 15%;text-align: center;float: left;margin-top: 30px}
+.train_records{width: 85%;float: left;padding: 20px;border: 1px solid #25201d; z-index: 900;margin-bottom:50px;margin-top: 30px}
+.train_contact{background-color: rgba(246,135,30,0.2);padding: 20px;color: #25201d;font-size: 1.2rem}
 .train_record{margin-top: 20px}
 .train_record h3{margin-bottom: 10px}
-.train_record p{padding: 10px 0}
+.train_record p{padding: 10px 0;font-size: 1rem}
 .train_record p:nth-child(even){background-color: rgba(37,29,29,0.1);}
-.link_selected{background-color: white;color: #f6871e!important;}
+.link_selected{background-color: white;color: #f6871e!important;border-left: 3px solid #f6871e!important;   border-bottom: 1px solid #25201d!important;
+    border-top: 1px solid #25201d!important; }
 .link_selected:after{
     display: block;
-    width: 3px;
+    width: 1px;
     content: "";
-    height: 30px;
+    height: 59px;
     position: absolute;
     right: 0;
-    margin-right: -2px;
+    margin-right: -1px;
     top:0;
     background-color: white;
 
@@ -403,30 +445,39 @@ input:focus {outline: none;}
 
 .link-my{
     color: #f6871e;
-    border-bottom: 1px solid #25201d;
-    border-top: 1px solid #25201d
+
+    border-left: 1px solid #25201d;
 }
 .link-my div{
     white-space: nowrap;
-    background-color: #25201d;
-    border-left: 1px solid #25201d;
+    background-color: rgba(37,29,29,0.1);
 }
 .link-my a {
+    display: block;
     position: relative;
-    color: white;
+    color: black;
     font-weight: 200;
-    line-height: 30px;
+    line-height: 60px;
     font-size: 16px;
     width: 100%;
+    border-bottom: 1px solid  #251D1D0A;
+    border-top: 1px solid #251D1D0A;
+    border-left: 3px solid #251D1D0A;
+}
+.link-my a:first-child{
+    border-top: 1px solid #25201d;
+}
+.link-my a:last-child{
+    border-bottom: 1px solid #25201d;
 }
 .link-my a:hover::after{
     display: block;
-    width: 3px;
+    width: 1px;
     content: "";
-    height: 30px;
+    height: 59px;
     position: absolute;
     right: 0;
-    margin-right: -2px;
+    margin-right: -1px;
     top:0;
     background-color: white;
 
@@ -441,6 +492,9 @@ input:focus {outline: none;}
 .link-my a:hover{
     color:#f6871e;
     background-color: #ffffff;
+    border-left: 3px solid #f6871e;
+    border-bottom: 1px solid #25201d;
+    border-top: 1px solid #25201d;
 }
 
 /*a标签特效*/
@@ -764,7 +818,7 @@ figure.effect-sarah img {
 }
 
 figure.effect-sarah:hover img {
-    opacity: 0.4;
+    opacity: 0.2;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
@@ -774,7 +828,8 @@ figure.effect-sarah figcaption {
 }
 
 figure.effect-sarah h2 {
-    color: #087cc9;
+    color: black;
+    font-size: 1rem;
     position: relative;
     overflow: hidden;
     padding: 0.5em 0;
@@ -786,7 +841,7 @@ figure.effect-sarah h2::after {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #087cc9;
+    background: black;
     content: '';
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
@@ -800,7 +855,7 @@ figure.effect-sarah:hover h2::after {
 }
 
 figure.effect-sarah p {
-    color: #087cc9;
+    color: black;
     padding: 1em 0;
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;

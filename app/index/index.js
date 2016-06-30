@@ -2,60 +2,20 @@
 
 app.controller('IndexCtrl', function($scope, $http) {
 //数据初始化
-  var mySwiper = new Swiper('.swiper-container',{
-    loop: true,
-    autoplay: 3000,
-  });
-  $scope.tabChange=function(num){
+
+
+  $(".index_tab>ul>li").on("mouseover ",function(event){
+    var num=event.currentTarget.dataset.tab
     $(".cur").removeClass("cur")
     $("#tab_"+num).addClass("cur")
     $(".index_info>ul>li").hide()
     $("#tab_text_"+num).removeClass("hidden")
     $("#tab_text_"+num).show()
-  }
-      /*
-  $http({
-    method: 'get',
-    url: " http://localhost:3000/testData/test1.json",
-    //data:{
-    //  page:1
-    //}
-  }).success(function(data, status) {
-    console.log(data.a)
-    //$scope.names=data.data.records
-    // Now we have a list of the stories (data.list.story)
-    // in the data object that the NPR API
-    // returns in JSON that looks like:
-    // data: { "list": {
-    //   "title": ...
-    //   "story": [
-    //     { "id": ...
-    //       "title": ...
-  }).error(function(data, status) {
-    // Some error occurred
-  });
- ajax请求
-$http({
-    method: 'get',
-    url: "http://test.jiaxinmore.com/apps/api/demand/getUserRansomRecords",
-    data:{
-        page:1
-    }
-  }).success(function(data, status) {
-    console.log(data.data)
-    $scope.names=data.data.records
-    // Now we have a list of the stories (data.list.story)
-    // in the data object that the NPR API
-    // returns in JSON that looks like:
-    // data: { "list": {
-    //   "title": ...
-    //   "story": [
-    //     { "id": ...
-    //       "title": ...
-  }).error(function(data, status) {
-    // Some error occurred
-  });
-*/
+  })
+      var mySwiper = new Swiper('.swiper-container',{
+        loop: true,
+        autoplay: 3000,
+      });
 
 })
 .filter("myUpperFilter", function() {
@@ -69,10 +29,10 @@ $http({
   return {
     template : '<div class="school_container"><div class="index_title"><div class="index_logo"></div>' +
     '          <div class="index_login">' +
-    '          <a class="index_login_btn" href="#/">首页</a>' +
-    '          <a class="login_school" href="#/school">家策商学院</a>' +
+    '          <a class="index_login_btn" href="/">首页</a>' +
+    '          <a class="login_school" href="/school/index">家策商学院</a>' +
     '          </div>' +
-    '<a href="#/login" class="index_login_btn2">登录</a>' +
+    '<a href="/user/login" class="index_login_btn2">登录</a>' +
     '          </div></div>'
   };
 })
