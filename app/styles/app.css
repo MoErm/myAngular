@@ -335,6 +335,7 @@ Pagination Styles
 .school_login_menu{position: relative;width: 1000px;margin: 0 auto;text-align: right;padding-top: 40px}
 .school_login_menu a{display: inline-block;height: 50px;line-height: 50px;text-align: center;color:#25201d }
 .school_login_menu>.tab_login,.school_login_menu>.tab_sign{width: 60px;position: relative}
+.tab_jiace{margin-left: 10px; font-size: 10px;}
 .school_login_menu>.tab_login{    padding: 3px 13px;border-radius: 30px;font-size: 12px;    border: 1px solid #000;        height: 30px;
     line-height: 22px;}
 .school_login_menu>.tab_help{width: 90px;position: relative}

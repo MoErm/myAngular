@@ -29,9 +29,9 @@ app.controller('SchoolCtrl', function($scope, $http) {
           '         <div class="school_logo"><img src="./images/school_logo.png"/></div>' +
           '         <div class="school_login_menu">' +
         '          <a class="tab_login" href="/user/login">登录</a' +
-        '          ><a class="tab_wei"><img src="./images/school_wei.png">官方微信</a' +
-        '            ><div class="twoCode"><img src="./images/twoCode.jpg"></div>' +
-        '            </div>'+
+        '          ><a class="tab_wei" ><img src="./images/school_wei.png">官方微信</a' +
+        '            ><a class="tab_jiace" style="margin-left: 10px; " href="/">前往家策联盟>></a><div class="twoCode"><img src="./images/twoCode.jpg"></div>' +
+        '            </div>' +
           '         </div>',
           controller:function($scope){
               $(".tab_wei").on("mouseover",function(){

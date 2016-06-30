@@ -2,7 +2,8 @@
 
 app.controller('LoginCtrl', function($scope, $http) {
 
-})    .directive("loginLogo", function() {
+})
+    .directive("loginLogo", function() {
 //自定义模块
     return {
         replace:true,
